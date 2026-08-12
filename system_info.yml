@@ -1,0 +1,26 @@
+---
+- name: Get Managed EC2 Information
+  hosts: all
+  gather_facts: true
+
+  tasks:
+
+    - name: Display hostname
+      ansible.builtin.debug:
+        var: ansible_hostname
+
+    - name: Display operating system
+      ansible.builtin.debug:
+        var: ansible_distribution
+
+    - name: Display OS version
+      ansible.builtin.debug:
+        var: ansible_distribution_version
+
+    - name: Display CPU count
+      ansible.builtin.debug:
+        var: ansible_processor_vcpus
+
+    - name: Display total memory
+      ansible.builtin.debug:
+        var: ansible_memtotal_mb

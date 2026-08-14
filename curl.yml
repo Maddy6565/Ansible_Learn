@@ -12,7 +12,7 @@
 
     - name: curl 
       ansible.builtin.get_url:
-        url: https://curl.se/ca/cacert.pem
+        url: "{{ cert_url }}"
         dest: /home/ansible/mozilla/cacert.pem
 
 

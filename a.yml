@@ -1,0 +1,5 @@
+---
+- name: Giving URL to cert Playbook
+  import_playbook: curl.yml
+  vars:
+    cert_url: https://curl.se/ca/cacert.pem

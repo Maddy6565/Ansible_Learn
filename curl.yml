@@ -1,12 +1,18 @@
 ---
 - name: Curl Download the cert
   hosts: all
-  become: true
 
   tasks:
+
+    - name: folder
+      ansible.builtin.file:
+        path: /home/ec2-user/cert-folder/
+        state: directory
 
     - name: curl 
       ansible.builtin.get_url:
         url: https://curl.se/ca/cacert.pem
-        dest: /home/ec2-user/cacert.pem
+        dest: /home/ec2-user/cert-folder/cacert.pem
+
+
 

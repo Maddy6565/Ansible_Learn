@@ -6,13 +6,13 @@
 
     - name: folder
       ansible.builtin.file:
-        path: /home/ec2-user/cert-folder/
+        path: /home/ec2-user/mozilla/
         state: directory
 
     - name: curl 
       ansible.builtin.get_url:
         url: https://curl.se/ca/cacert.pem
-        dest: /home/ec2-user/cert-folder/cacert.pem
+        dest: /home/ec2-user/mozilla/cacert.pem
 
 
 

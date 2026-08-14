@@ -1,19 +1,18 @@
 ---
 - name: Curl Download the cert
   hosts: all
-  become: true
 
   tasks:
 
     - name: folder
       ansible.builtin.file:
-        path: /home/ansible/mozilla/
+        path: /home/ansible/variable/
         state: directory
 
     - name: curl 
       ansible.builtin.get_url:
         url: "{{ cert_url }}"
-        dest: /home/ansible/mozilla/cacert.pem
+        dest: /home/ansible/variable/cacert.pem
 
 
 

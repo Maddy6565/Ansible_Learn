@@ -1,6 +1,7 @@
 ---
 - name: Curl Download the cert
   hosts: all
+  become: true
 
   tasks:
 
